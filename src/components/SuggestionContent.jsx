@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 import ProductRequestCard from './ProductRequestCard'
 import SuggestionHeader from './SuggestionHeader'
-import { useQuery } from '@tanstack/react-query'
-import { getData } from '../utils/fetchdata'
+
 import EmptyPage from './EmptyPage'
+import { useDataContext } from '../context/DataContext'
 
 const Container = styled.div`
   display: flex; 
@@ -11,10 +11,12 @@ const Container = styled.div`
   gap: 24px;
 `
 export default function SuggestionContent() {
+  const { sortedData } = useDataContext()
+
   return (
     <Container>
       <SuggestionHeader />
-      {suggestionData?.length <= 0 ? <EmptyPage /> : <ProductRequestCard />}
+      {sortedData?.length <= 0 ? <EmptyPage /> : <ProductRequestCard />}
     </Container>
   )
 }
