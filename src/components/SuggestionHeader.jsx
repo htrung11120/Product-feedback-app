@@ -176,7 +176,7 @@ export default function SuggestionHeader() {
           src="/src/assets/suggestions/icon-suggestions.svg"
           alt=""
         />
-        <SuggestionName>{`${sortedData?.length} ${sortedData?.[0]?.status}`}</SuggestionName>
+        <SuggestionName>{`${sortedData?.length} Suggestions`}</SuggestionName>
         <SortTextContainer onClick={openModal}>
           <SortByText>Sort by: </SortByText>
           {sortCategory.map(

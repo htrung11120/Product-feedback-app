@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { useDataContext } from '../context/DataContext'
 
 const CategoryContainer = styled.div`
   width: 255px;
@@ -31,20 +32,16 @@ const StyledButton = styled.button`
 `
 
 const CategoryBoard = () => {
-  const [clickedStates, setClickedStates] = useState({
-    All: true,
-    UI: false,
-    UX: false,
-    Enhancement: false,
-    Bug: false,
-    Feature: false,
-  })
+  const { clickedStates, setClickedStates } = useDataContext()
 
   const handleClick = (category) => {
-    setClickedStates((prevClickedStates) => ({
-      ...prevClickedStates,
-      [category]: !prevClickedStates[category],
-    }))
+    setClickedStates((prevClickedStates) => {
+      const newClickedStates = Object.fromEntries(
+        Object.keys(prevClickedStates).map((key) => [key, false])
+      )
+      newClickedStates[category] = true
+      return newClickedStates
+    })
   }
 
   return (
