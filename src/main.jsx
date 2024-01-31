@@ -7,6 +7,7 @@ import Suggestion from './pages/Suggestion'
 import './index.css'
 import Detail from './pages/Detail'
 import { DataProvider } from './context/DataContext'
+import SingleCommentCard from './components/SingleCommentCard'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -24,9 +25,9 @@ const router = createBrowserRouter([
         index: true,
       },
       {
-        path: 'detail',
+        path: 'comment',
         element: <Detail />,
-        children: [{ path: ':id', element: <p>asdas</p> }],
+        children: [{ path: ':id', element: <SingleCommentCard /> }],
       },
     ],
   },

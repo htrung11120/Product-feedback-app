@@ -7,22 +7,22 @@ export default function CommentDetails() {
 
   const handleTextChange = (event) => {
     const newText = event.target.value
-    setCommentText(newText)
-    updateCharCount(newText)
+    if (charCount < 250 || newText.length < commentText.length) {
+      setCommentText(newText)
+      updateCharCount(newText)
+    }
   }
 
   const updateCharCount = (text) => {
     const currentCharCount = text.length
     setCharCount(currentCharCount)
 
-    // Limit the number of characters based on the max prop
     if (text.length > Input.defaultProps.max) {
       setCommentText(text.slice(0, Input.defaultProps.max))
     }
   }
 
   const handlePostComment = () => {
-    // Implement your logic to post the comment here
     console.log('Posting comment:', commentText)
   }
 
@@ -47,8 +47,9 @@ export default function CommentDetails() {
 }
 
 const CommentContainer = styled.div`
+box-sizing: border-box;
   padding: 24px;
-  width: 730px;
+  width: 825px;
   height: 246px;
   border-radius: 10px;
   background: #FFF;

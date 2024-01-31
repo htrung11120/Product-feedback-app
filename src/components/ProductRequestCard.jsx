@@ -2,13 +2,17 @@ import styled, { css } from 'styled-components'
 import commentIcon from '../assets/shared/icon-comments.svg'
 import { useState } from 'react'
 import UpIconArrow from './UpIconArrow'
-import { useDataContext } from '../context/DataContext'
+import { useNavigate } from 'react-router-dom'
 
-export default function ProductRequestCard() {
-  const { sortedData, isLoading, error } = useDataContext()
+export default function ProductRequestCard({ sortedData, isLoading, error }) {
   const [clickedUpvotes, setClickedUpvotes] = useState(
     Array(sortedData?.length).fill(false)
   )
+  const navigate = useNavigate()
+
+  const handleClick = (id) => {
+    navigate(`/comment/${id}`)
+  }
 
   if (isLoading) {
     return <div>Loading...</div>
@@ -28,10 +32,10 @@ export default function ProductRequestCard() {
 
   return (
     <CardContainer>
-      {sortedData.map(
+      {sortedData?.map(
         ({ id, upvotes, title, description, status, comments }, index) => {
           return (
-            <Card key={id}>
+            <Card key={id} onClick={() => handleClick(id)}>
               <CardElement>
                 <UpVote
                   clicked={clickedUpvotes[index]}
@@ -61,6 +65,8 @@ export default function ProductRequestCard() {
 }
 
 const CardContainer = styled.div`
+    width: 730px;
+
   display: flex;
   flex-direction: column;
   gap: 20px;

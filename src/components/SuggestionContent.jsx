@@ -11,12 +11,20 @@ const Container = styled.div`
   gap: 24px;
 `
 export default function SuggestionContent() {
-  const { sortedData } = useDataContext()
+  const { sortedData, isLoading, error } = useDataContext()
 
   return (
     <Container>
       <SuggestionHeader />
-      {sortedData?.length <= 0 ? <EmptyPage /> : <ProductRequestCard />}
+      {sortedData?.length <= 0 ? (
+        <EmptyPage />
+      ) : (
+        <ProductRequestCard
+          sortedData={sortedData}
+          isLoading={isLoading}
+          error={error}
+        />
+      )}
     </Container>
   )
 }
