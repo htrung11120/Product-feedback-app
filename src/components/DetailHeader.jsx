@@ -20,7 +20,7 @@ const HeaderContainer = styled.div`
     display: flex ;
     flex-direction:  row;
     justify-content: space-between;
-    width: 730px;
+    width: 825px;
     height: 44px;
     margin-top: 92px;
 `

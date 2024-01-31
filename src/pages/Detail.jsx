@@ -18,6 +18,7 @@ const Container = styled.div`
   background: #F7F8FD;
   max-width: 100vw;
   width: 100vw;
+  padding-bottom: 130px;
 `
 const Content = styled.div`
     display: flex;

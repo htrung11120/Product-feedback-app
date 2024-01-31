@@ -25,7 +25,6 @@ const HeaderContainer = styled.div`
   gap: 32px;
   display: flex;
   flex-direction: row;
-  align-items: flex-start; /* Align items to the top */
 `
 
 const Comment = styled.p`
@@ -42,6 +41,7 @@ const Comment = styled.p`
 const CommentContext = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
 `
 
 const UserCommentConatainer = styled.div`

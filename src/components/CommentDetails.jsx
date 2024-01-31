@@ -66,7 +66,7 @@ const Header = styled.p`
 `
 
 const Input = styled.input`
-  width: 664px;
+  width: 700px;
   height: 80px;
   border-radius: 5px;
   background: #F7F8FD;
