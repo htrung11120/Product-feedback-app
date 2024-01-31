@@ -4,7 +4,7 @@ import ProductRequestCard from './ProductRequestCard'
 import { useParams } from 'react-router-dom'
 
 export default function SingleCommentCard() {
-  const { id } = useParams() // Use destructuring to get the id parameter
+  const { id } = useParams()
   const { sortedData, isLoading, error } = useDataContext()
   const postData = sortedData?.find((el) => el.id === parseInt(id))
   const commentData = postData?.comments
