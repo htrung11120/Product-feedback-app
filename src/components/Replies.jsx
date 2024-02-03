@@ -9,7 +9,7 @@ import {
   NameContainer,
   Name,
   UserName,
-} from '../utils/RepliesStyles'
+} from '../Style/RepliesStyles'
 
 export default function Replies({ replies, usernameComment }) {
   return (

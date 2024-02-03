@@ -3,7 +3,7 @@ import {
   StyledContainer,
   StyledHeader,
   StyledText,
-} from '../utils/FeedbackBoardStyles'
+} from '../Style/FeedbackBoardStyles'
 
 export default function FeedBackBoard() {
   return (

@@ -8,6 +8,7 @@ import './index.css'
 import Detail from './pages/Detail'
 import { DataProvider } from './context/DataContext'
 import SingleCommentCard from './components/SingleCommentCard'
+import AddFeedBack from './components/AddFeedBack'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
         children: [{ path: ':id', element: <SingleCommentCard /> }],
       },
     ],
+  },
+  {
+    path: 'new',
+    element: <AddFeedBack />,
   },
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(

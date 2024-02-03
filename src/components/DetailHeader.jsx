@@ -1,4 +1,4 @@
-import { HeaderContainer, Text, Arr, Btn } from '../utils/DetailHeaderStyles'
+import { HeaderContainer, Text, Arr, Btn } from '../Style/DetailHeaderStyles'
 import { useNavigate } from 'react-router-dom'
 import leftArr from '../assets/shared/icon-arrow-left.svg'
 

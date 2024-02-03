@@ -9,7 +9,7 @@ import {
   Dot,
   PlanName,
   Quantity,
-} from '../utils/RoadMapStyles'
+} from '../Style/RoadMapStyles'
 export default function RoadMap() {
   const [roadMap, setRoadMap] = useState([
     {

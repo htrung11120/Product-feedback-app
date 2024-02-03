@@ -5,7 +5,7 @@ import {
   Heading,
   Text,
   FeedbackButton,
-} from '../utils/EmptyPageStyles'
+} from '../Style/EmptyPageStyles'
 import emptyIcon from '../assets/suggestions/illustration-empty.svg'
 
 export default function EmptyPage() {

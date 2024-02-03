@@ -17,8 +17,11 @@ import {
   SortOptionContainer,
   SortOptionsModal,
   SortOption,
-} from '../utils/SuggestionHeader'
+} from '../Style/SuggestionHeader'
+import { useNavigate } from 'react-router-dom'
 export default function SuggestionHeader() {
+  const navigate = useNavigate()
+
   const { sortCategory, sortedData, setSortCategory, isLoading, error } =
     useDataContext()
   const [isOpen, setIsOpen] = useState(false)
@@ -41,6 +44,10 @@ export default function SuggestionHeader() {
   }
   const openModal = () => {
     setIsOpen(!isOpen)
+  }
+
+  const addFeedBack = () => {
+    navigate('/new')
   }
 
   return (
@@ -80,7 +87,7 @@ export default function SuggestionHeader() {
             ))}
           </SortOptionsModal>
         )}
-        <FeedbackButton>+ Add Feedback</FeedbackButton>
+        <FeedbackButton onClick={addFeedBack}>+ Add Feedback</FeedbackButton>
       </HeaderContentContainer>
     </SuggestionHeaderContainer>
   )

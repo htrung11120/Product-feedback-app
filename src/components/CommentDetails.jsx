@@ -6,7 +6,8 @@ import {
   FooterContainer,
   CharCount,
   PostBtn,
-} from '../utils/CommentStyles'
+} from '../Style/CommentStyles'
+import styled from 'styled-components'
 
 export default function CommentDetails() {
   const [commentText, setCommentText] = useState('')
@@ -34,21 +35,30 @@ export default function CommentDetails() {
   }
 
   return (
-    <CommentContainer>
-      <form action="">
-        <Header>Add Comment</Header>
-        <Input
-          max={250}
-          type="text"
-          placeholder="Type your comment here"
-          value={commentText}
-          onChange={handleTextChange}
-        />
-        <FooterContainer>
-          <CharCount>{`${250 - charCount} Characters left`}</CharCount>
-          <PostBtn onClick={handlePostComment}>Post Comment</PostBtn>
-        </FooterContainer>
-      </form>
-    </CommentContainer>
+    <Form action="">
+      <Header>Add Comment</Header>
+      <Input
+        max={250}
+        type="text"
+        placeholder="Type your comment here"
+        value={commentText}
+        onChange={handleTextChange}
+      />
+      <FooterContainer>
+        <CharCount>{`${250 - charCount} Characters left`}</CharCount>
+        <PostBtn onClick={handlePostComment}>Post Comment</PostBtn>
+      </FooterContainer>
+    </Form>
   )
 }
+const Form = styled.div`
+  background-color: white;
+  width: 825px;
+  height: 246px;
+  display: flex;
+  flex-direction: column;
+padding-left:34px;
+padding-right:32px;
+
+box-sizing: border-box;
+`

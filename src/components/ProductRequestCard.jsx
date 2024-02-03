@@ -13,7 +13,7 @@ import {
   CommentContainer,
   CommentIcon,
   CommentNumber,
-} from '../utils/ProductRequestCardStyles'
+} from '../Style/ProductRequestCardStyles'
 import commentIcon from '../assets/shared/icon-comments.svg'
 import UpIconArrow from './UpIconArrow'
 import { useNavigate } from 'react-router-dom'

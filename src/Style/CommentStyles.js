@@ -41,6 +41,7 @@ export const CommentContext = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  position: relative;
 `
 
 export const UserCommentConatainer = styled.div`
@@ -59,6 +60,14 @@ export const Avatar = styled.img`
   width: 40px;
   height: 40px;
   border-radius: 40px;
+`
+export const Line = styled.div`
+border-left: 1px solid rgb(151, 151, 151,.5);
+top: 65px;
+  left: 17.5px;
+  width: 1px;
+  height: calc(100% - 170px);
+position: absolute;
 `
 
 export const CommentContainer = styled.div`

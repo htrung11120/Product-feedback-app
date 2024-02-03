@@ -1,5 +1,5 @@
-import React from 'react'
 import {
+  Line,
   CommentContainer,
   Comment,
   UserCommentConatainer,
@@ -11,7 +11,7 @@ import {
   NameContainer,
   Reply,
   CommentContext,
-} from '../utils/CommentStyles'
+} from '../Style/CommentStyles'
 import Replies from './Replies'
 
 export default function CurrentComents({ commentData, isLoading, error }) {
@@ -46,6 +46,7 @@ export default function CurrentComents({ commentData, isLoading, error }) {
                     <Reply>reply</Reply>
                   </HeaderContainer>
                   <Comment>{el.content}</Comment>
+                  {!replies ? null : <Line></Line>}
                   <Replies
                     replies={replies}
                     usernameComment={el.user.username}

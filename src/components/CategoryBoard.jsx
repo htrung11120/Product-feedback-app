@@ -2,7 +2,7 @@ import {
   CategoryContainer,
   ButtonContainer,
   StyledButton,
-} from '../utils/Styled'
+} from '../Style/Styled'
 import { useDataContext } from '../context/DataContext'
 
 const CategoryBoard = () => {
