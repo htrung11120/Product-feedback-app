@@ -17,19 +17,27 @@ export default function RoadMapPage() {
   }
   return (
     <Container>
-      <RoadMapHeader />
-      <BoardContainer>
-        <RoadMapBoard data={planned} />
-        <RoadMapBoard data={live} />
-        <RoadMapBoard data={inProgress} />
-      </BoardContainer>
+      <Content>
+        <RoadMapHeader />
+        <BoardContainer>
+          <RoadMapBoard data={planned} />
+          <RoadMapBoard data={live} />
+          <RoadMapBoard data={inProgress} />
+        </BoardContainer>
+      </Content>
     </Container>
   )
 }
+const Content = styled.div`
+    width: 1110px;
+
+`
 
 const Container = styled.div`
   background: #F7F8FD;
   padding: 78px 165px;
+display: flex;
+justify-content: center;
   min-height: 100vh;
 `
 const BoardContainer = styled.div`

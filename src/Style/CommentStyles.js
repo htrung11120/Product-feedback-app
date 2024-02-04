@@ -8,6 +8,7 @@ export const Reply = styled.div`
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  text-transform: capitalize;
 `
 
 export const CommentsCounter = styled.div`
@@ -66,7 +67,7 @@ border-left: 1px solid rgb(151, 151, 151,.5);
 top: 65px;
   left: 17.5px;
   width: 1px;
-  height: calc(100% - 170px);
+  height: calc(100% - 300px);
 position: absolute;
 `
 
@@ -112,16 +113,25 @@ export const Header = styled.p`
   letter-spacing: -0.25px;
 `
 
-export const Input = styled.input`
+export const Input = styled.textarea`
+box-sizing: border-box;
   width: 700px;
   height: 80px;
   border-radius: 5px;
   background: #F7F8FD;
-  padding: 0 24px;
+  padding: 16px 24px;
   border: none;
+  resize: none;
+  color: #3A4374;
+font-family: Jost;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 
-  &::placeholder {
-    transform: translateY(-15px);
+  &:focus {
+    border:3px solid #4661E6; 
+    outline: none; 
   }
 `
 

@@ -4,10 +4,8 @@ import leftArr from '../assets/shared/icon-arrow-left.svg'
 
 export default function DetailHeader() {
   const navigate = useNavigate()
-  const { id } = useParams()
-  console.log(id)
   const goBackClick = () => {
-    navigate(-1)
+    navigate('/')
   }
 
   return (

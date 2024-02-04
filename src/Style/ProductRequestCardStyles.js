@@ -3,6 +3,8 @@ import styled, { css } from 'styled-components'
 export const CardContainer = styled.div`
   width: 730px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   gap: 20px;
 `
@@ -15,6 +17,7 @@ export const Card = styled.div`
   width: 825px;
   height: 151px;
   background: #fff;
+  align-self: flex-start;
   ${CommonCardStyles}
 `
 
@@ -38,6 +41,9 @@ export const UpVote = styled.div`
   justify-content: center;
   gap: 8px;
   cursor: pointer;
+  &:hover{
+    background: #CFD7FF;
+  }
 `
 
 export const VoteText = styled.span`
@@ -56,6 +62,7 @@ export const CardContext = styled.div`
 `
 
 export const CardTitle = styled.span`
+cursor: pointer;
   color: #3A4374;
   font-family: Jost;
   font-size: 18px;
@@ -63,6 +70,9 @@ export const CardTitle = styled.span`
   font-weight: 700;
   line-height: normal;
   letter-spacing: -0.25px;
+  &:hover{
+    color:rgb(58, 67, 116,0.5) ;
+  }
 `
 
 export const CardDescription = styled.span`

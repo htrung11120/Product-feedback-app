@@ -16,8 +16,8 @@ export default function Detail() {
 }
 const Container = styled.div`
   background: #F7F8FD;
-  max-width: 100vw;
   width: 100vw;
+  min-height: 100vh;
   padding-bottom: 130px;
 `
 const Content = styled.div`

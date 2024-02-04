@@ -2,7 +2,6 @@ import { useState } from 'react'
 import {
   CardContainer,
   Card,
-  CommonCardStyles,
   CardElement,
   UpVote,
   VoteText,
@@ -16,7 +15,7 @@ import {
 } from '../Style/ProductRequestCardStyles'
 import commentIcon from '../assets/shared/icon-comments.svg'
 import UpIconArrow from './UpIconArrow'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 export default function ProductRequestCard({ sortedData, isLoading, error }) {
   const [clickedUpvotes, setClickedUpvotes] = useState(
@@ -46,30 +45,34 @@ export default function ProductRequestCard({ sortedData, isLoading, error }) {
 
   return (
     <CardContainer>
-      {sortedData?.map(
-        ({ id, upvotes, title, description, status, comments }, index) => (
-          <Card key={id} onClick={() => handleClick(id)}>
-            <CardElement>
-              <UpVote
-                clicked={clickedUpvotes[index]}
-                onClick={() => handleUpvoteClick(index)}
-              >
-                <UpIconArrow clicked={clickedUpvotes[index]} />
-                <VoteText clicked={clickedUpvotes[index]}>{upvotes}</VoteText>
-              </UpVote>
-              <CardContext>
-                <CardTitle>{title}</CardTitle>
-                <CardDescription>{description}</CardDescription>
-                <Status>{status}</Status>
-              </CardContext>
-              <CommentContainer>
-                <CommentIcon src={commentIcon} alt="commentIcon" />
-                <CommentNumber>{comments ? comments.length : 0}</CommentNumber>
-              </CommentContainer>
-            </CardElement>
-          </Card>
-        )
-      )}
+      {sortedData?.map((data, index) => (
+        <Card key={`{data?.id}+1`}>
+          <CardElement>
+            <UpVote
+              clicked={clickedUpvotes[index]}
+              onClick={() => handleUpvoteClick(index)}
+            >
+              <UpIconArrow clicked={clickedUpvotes[index]} />
+              <VoteText clicked={clickedUpvotes[index]}>
+                {data?.upvotes}
+              </VoteText>
+            </UpVote>
+            <CardContext>
+              <CardTitle onClick={() => handleClick(data?.id)}>
+                {data?.title}
+              </CardTitle>
+              <CardDescription>{data?.description}</CardDescription>
+              <Status>{data?.status}</Status>
+            </CardContext>
+            <CommentContainer>
+              <CommentIcon src={commentIcon} alt="commentIcon" />
+              <CommentNumber>
+                {data?.comments ? data.comments.length : 0}
+              </CommentNumber>
+            </CommentContainer>
+          </CardElement>
+        </Card>
+      ))}
     </CardContainer>
   )
 }

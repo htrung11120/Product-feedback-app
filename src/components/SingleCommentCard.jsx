@@ -13,11 +13,8 @@ export default function SingleCommentCard() {
   }
 
   if (error) {
+    11
     return <div>Error: {error.message}</div>
-  }
-
-  if (!commentData) {
-    return <div>Comment not found!</div>
   }
 
   return (

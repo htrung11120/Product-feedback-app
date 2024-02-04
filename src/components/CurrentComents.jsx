@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import {
   Line,
   CommentContainer,
@@ -13,8 +14,13 @@ import {
   CommentContext,
 } from '../Style/CommentStyles'
 import Replies from './Replies'
+import { v4 as uuid } from 'uuid'
+import ReplyInput from './ReplyInput'
 
 export default function CurrentComents({ commentData, isLoading, error }) {
+  // State to manage which reply input is open for each comment
+  const [replyInputsOpen, setReplyInputsOpen] = useState({})
+
   if (isLoading) {
     return <div>Loading...</div>
   }
@@ -22,7 +28,19 @@ export default function CurrentComents({ commentData, isLoading, error }) {
   if (error) {
     return <div>Error: {error.message}</div>
   }
-  console.log(commentData)
+
+  if (!commentData) {
+    return null
+  }
+
+  // Function to toggle reply input for a specific comment
+  const toggleReplyInput = (commentId) => {
+    setReplyInputsOpen((prev) => ({
+      ...prev,
+      [commentId]: !prev[commentId],
+    }))
+  }
+
   return (
     <UserCommentConatainer>
       {commentData.length > 0 && (
@@ -33,7 +51,7 @@ export default function CurrentComents({ commentData, isLoading, error }) {
 
             return (
               <CommentContainer
-                key={el.id}
+                key={uuid()}
                 last={index === commentData.length - 1}
               >
                 <CommentContext>
@@ -43,9 +61,15 @@ export default function CurrentComents({ commentData, isLoading, error }) {
                       <Name>{el.user.name}</Name>
                       <UserName>@{el.user.username}</UserName>
                     </NameContainer>
-                    <Reply>reply</Reply>
+                    <Reply
+                      onClick={() => toggleReplyInput(el.id)}
+                      isReplyOpen={replyInputsOpen[el.id]}
+                    >
+                      reply
+                    </Reply>
                   </HeaderContainer>
                   <Comment>{el.content}</Comment>
+                  {replyInputsOpen[el.id] && <ReplyInput />}
                   {!replies ? null : <Line></Line>}
                   <Replies
                     replies={replies}
