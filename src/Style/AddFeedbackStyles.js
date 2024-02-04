@@ -9,13 +9,34 @@ stroke-width: 2px;
 stroke: #4661E6;
 `
 const ButtonContainer = styled.div`
-    align-self: flex-end;
     display: flex;
     flex-direction: row;
     gap: 16px;
 `
+const DeleteBtn = styled.button`
+color: white;
+align-self: flex-start;
+margin-right: auto;
+border: none;
+width: 93px;
+height: 44px;
+flex-shrink: 0;
+border-radius: 10px;
+background: #D73737;
+color: #F2F4FE;
+font-family: Jost;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+&:hover{
+  background: #E98888;
+  cursor: pointer;
+
+}
+`
 const CancelBtn = styled.button`
-    width: 93px;
+   width: 93px;
 height: 44px;
 flex-shrink: 0;
 border-radius: 10px;
@@ -27,7 +48,11 @@ font-style: normal;
 font-weight: 700;
 line-height: normal;
 border: none;
+&:hover{
+  background: #656EA3;
+  cursor: pointer;
 
+  }
 `
 const AddFeedBack = styled.button`
   width: 144px;
@@ -42,6 +67,10 @@ font-style: normal;
 font-weight: 700;
 line-height: normal;
 border: none;
+&:hover{
+  background: #C75AF6;
+  cursor: pointer;
+  }
 `
 
 const SubLable = styled.p`
@@ -154,12 +183,20 @@ cursor: pointer;
 
 `
 const TitleInput = styled.input`
+color: #3A4374;
+font-family: Jost;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+box-sizing: border-box;
   width: 456px;
   height: 48px;
   border: none;
   border-radius: 5px;
   background: #f7f8fd;
   cursor: pointer;
+  padding-left:24px;
 `
 
 const SelectedCategory = styled.div`
@@ -191,7 +228,7 @@ const ModalContainer = styled.div`
   background: #fff;
   box-shadow: 0px 10px 40px -7px rgba(55, 63, 104, 0.35);
   position: absolute;
-  top: 720px;
+  top: 640px;
   left: 520px;
 `
 
@@ -251,4 +288,5 @@ export {
   ModalContent,
   CategoryList,
   ListItem,
+  DeleteBtn,
 }

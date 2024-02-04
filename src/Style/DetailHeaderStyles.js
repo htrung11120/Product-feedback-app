@@ -29,6 +29,7 @@ export const Arr = styled.img`
 `
 
 export const Btn = styled.button`
+border: none;
   width: 142px;
   height: 44px;
   border-radius: 10px;
@@ -39,4 +40,8 @@ export const Btn = styled.button`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  &:hover{
+    cursor: pointer;
+    background-color: #7C91F9;
+  }
 `

@@ -153,4 +153,8 @@ export const PostBtn = styled.button`
   font-weight: 700;
   line-height: normal;
   border: none;
+  &:hover{
+    background: #C75AF6;
+    cursor: pointer;
+  }
 `

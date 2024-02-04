@@ -33,7 +33,7 @@ export default function RoadMap() {
     <RoadMapContainer>
       <Header>
         <RoadMapTitle>Road Map</RoadMapTitle>
-        <ViewLink>View</ViewLink>
+        <ViewLink to="roadMap">View</ViewLink>
       </Header>
       <PlannedContainer>
         {roadMap.map((item, index) => {

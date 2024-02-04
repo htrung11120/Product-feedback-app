@@ -1,10 +1,11 @@
 import { HeaderContainer, Text, Arr, Btn } from '../Style/DetailHeaderStyles'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import leftArr from '../assets/shared/icon-arrow-left.svg'
 
 export default function DetailHeader() {
   const navigate = useNavigate()
-
+  const { id } = useParams()
+  console.log(id)
   const goBackClick = () => {
     navigate(-1)
   }
@@ -15,7 +16,13 @@ export default function DetailHeader() {
         <Arr src={leftArr} alt="" />
         Go Back
       </Text>
-      <Btn>Edit Feedback</Btn>
+      <Btn
+        onClick={() => {
+          navigate(`/edit/comment/${id}`)
+        }}
+      >
+        Edit Feedback
+      </Btn>
     </HeaderContainer>
   )
 }

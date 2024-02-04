@@ -9,6 +9,8 @@ import Detail from './pages/Detail'
 import { DataProvider } from './context/DataContext'
 import SingleCommentCard from './components/SingleCommentCard'
 import AddFeedBack from './components/AddFeedBack'
+import EditFeedBack from './components/EditFeedBack'
+import RoadMapPage from './pages/RoadMapPage'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -35,6 +37,14 @@ const router = createBrowserRouter([
   {
     path: 'new',
     element: <AddFeedBack />,
+  },
+  {
+    path: 'edit/comment/:id',
+    element: <EditFeedBack />,
+  },
+  {
+    path: 'roadMap',
+    element: <RoadMapPage />,
   },
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
