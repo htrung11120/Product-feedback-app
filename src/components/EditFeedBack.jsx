@@ -46,7 +46,6 @@ export default function AddFeedback() {
     }
   }, [sortedData, id])
 
-  // Initialize states with postData values
   const [title, setTitle] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('')
   const [detail, setDetail] = useState('')

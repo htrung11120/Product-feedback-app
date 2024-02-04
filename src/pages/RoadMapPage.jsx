@@ -21,8 +21,8 @@ export default function RoadMapPage() {
         <RoadMapHeader />
         <BoardContainer>
           <RoadMapBoard data={planned} />
-          <RoadMapBoard data={live} />
           <RoadMapBoard data={inProgress} />
+          <RoadMapBoard data={live} />
         </BoardContainer>
       </Content>
     </Container>

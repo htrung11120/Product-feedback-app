@@ -1,10 +1,9 @@
 import styled, { css } from 'styled-components'
 
 export const CardContainer = styled.div`
-  width: 730px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: 20px;
 `
@@ -15,17 +14,17 @@ export const CommonCardStyles = css`
 
 export const Card = styled.div`
   width: 825px;
+  padding:28px 0 0 32px  ;
+  box-sizing: border-box;
   height: 151px;
   background: #fff;
-  align-self: flex-start;
   ${CommonCardStyles}
 `
 
 export const CardElement = styled.div`
-  margin-top: 28px;
-  margin-left: 32px;
+
   display: flex;
-  flex: row;
+  flex-direction: row;
   gap: 40px;
 `
 

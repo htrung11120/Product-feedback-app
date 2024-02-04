@@ -72,7 +72,14 @@ border: none;
   cursor: pointer;
   }
 `
-
+const WarningText = styled.p`
+color: #D73737;
+font-family: Jost;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+`
 const SubLable = styled.p`
 margin: 0;
 margin-bottom: 16px;
@@ -180,7 +187,10 @@ resize: none;
 padding-top:16px ;
 padding-left:24px;
 cursor: pointer;
-
+&:focus {
+    border:3px solid #4661E6; 
+    outline: none; 
+  }
 `
 const TitleInput = styled.input`
 color: #3A4374;
@@ -197,6 +207,10 @@ box-sizing: border-box;
   background: #f7f8fd;
   cursor: pointer;
   padding-left:24px;
+  &:focus {
+    border:3px solid #4661E6; 
+    outline: none; 
+  }
 `
 
 const SelectedCategory = styled.div`
@@ -228,12 +242,15 @@ const ModalContainer = styled.div`
   background: #fff;
   box-shadow: 0px 10px 40px -7px rgba(55, 63, 104, 0.35);
   position: absolute;
-  top: 640px;
-  left: 520px;
+  top: calc(100% - 480px); 
+  left: 0;
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
+  z-index: 1; 
 `
 
 const ModalContent = styled.div`
-  /* Your styling for modal content */
 `
 
 const CategoryList = styled.ul`
@@ -262,6 +279,9 @@ padding-right: 24px;
   &:last-child {
     border-bottom: none;
   }
+  &:hover{
+    color: #AD1FEA;
+  }
 `
 
 export {
@@ -289,4 +309,5 @@ export {
   CategoryList,
   ListItem,
   DeleteBtn,
+  WarningText,
 }

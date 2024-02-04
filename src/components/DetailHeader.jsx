@@ -4,10 +4,10 @@ import leftArr from '../assets/shared/icon-arrow-left.svg'
 
 export default function DetailHeader() {
   const navigate = useNavigate()
+  const { id } = useParams()
   const goBackClick = () => {
     navigate('/')
   }
-
   return (
     <HeaderContainer>
       <Text onClick={goBackClick}>

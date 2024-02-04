@@ -18,7 +18,6 @@ import { v4 as uuid } from 'uuid'
 import ReplyInput from './ReplyInput'
 
 export default function CurrentComents({ commentData, isLoading, error }) {
-  // State to manage which reply input is open for each comment
   const [replyInputsOpen, setReplyInputsOpen] = useState({})
 
   if (isLoading) {
@@ -33,7 +32,6 @@ export default function CurrentComents({ commentData, isLoading, error }) {
     return null
   }
 
-  // Function to toggle reply input for a specific comment
   const toggleReplyInput = (commentId) => {
     setReplyInputsOpen((prev) => ({
       ...prev,

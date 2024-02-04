@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { v4 as uuid } from 'uuid'
 import {
   CardContainer,
   Card,
@@ -46,7 +47,7 @@ export default function ProductRequestCard({ sortedData, isLoading, error }) {
   return (
     <CardContainer>
       {sortedData?.map((data, index) => (
-        <Card key={`{data?.id}+1`}>
+        <Card key={uuid()}>
           <CardElement>
             <UpVote
               clicked={clickedUpvotes[index]}
