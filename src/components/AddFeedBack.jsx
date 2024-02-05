@@ -47,13 +47,7 @@ export default function AddFeedback() {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    if (!detailInputValue.trim()) {
-      setFormSubmitted(true)
-      return
-    }
-
-    // Proceed with your form submission logic
-    console.log('Form submitted successfully')
+    navigate(-1)
   }
 
   return (

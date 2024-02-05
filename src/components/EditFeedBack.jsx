@@ -75,6 +75,12 @@ export default function AddFeedback() {
     setDetail(e.target.value)
   }
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    navigate('/')
+  }
+
   return (
     <FeedbackContainer>
       <div>
@@ -93,7 +99,7 @@ export default function AddFeedback() {
               <Img src={plus} alt="" />
             </ImgContainer>
             <HeaderText>{`Editing ‘${postData?.title ?? ''}’`}</HeaderText>
-            <Form>
+            <Form onSubmit={handleSubmit}>
               <FormGroup>
                 <Label htmlFor="title">Feedback Title</Label>
                 <SubLable>Add a short, descriptive headline</SubLable>
