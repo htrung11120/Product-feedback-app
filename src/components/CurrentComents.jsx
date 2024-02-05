@@ -54,7 +54,7 @@ export default function CurrentComents({ commentData, isLoading, error }) {
               >
                 <CommentContext>
                   <HeaderContainer>
-                    <Avatar src={`/src/${el.user.image}`} alt="" />
+                    <Avatar src={`/${el.user.image}`} alt="" />
                     <NameContainer>
                       <Name>{el.user.name}</Name>
                       <UserName>@{el.user.username}</UserName>

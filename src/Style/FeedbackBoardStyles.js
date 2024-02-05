@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const StyledBoard = styled.div`
-    background-image: url("/src/assets/suggestions/desktop/background-header.png");
+    background-image: url("/assets/suggestions/desktop/background-header.png");
     border-radius: 8px;
     background-size: contain;
     background-repeat: no-repeat;

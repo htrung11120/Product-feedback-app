@@ -53,10 +53,7 @@ export default function SuggestionHeader() {
   return (
     <SuggestionHeaderContainer>
       <HeaderContentContainer>
-        <SuggestionIcon
-          src="/src/assets/suggestions/icon-suggestions.svg"
-          alt=""
-        />
+        <SuggestionIcon src="/assets/suggestions/icon-suggestions.svg" alt="" />
         <SuggestionName>{`${sortedData?.length} Suggestions`}</SuggestionName>
         <SortTextContainer onClick={openModal}>
           <SortByText>Sort by: </SortByText>

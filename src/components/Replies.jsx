@@ -29,7 +29,7 @@ export default function Replies({ replies, usernameComment }) {
       {replies?.map((el) => (
         <ReplyContainer key={uuid()}>
           <HeaderContainer>
-            <Avatar src={`/src/${el.user.image}`} alt="" />
+            <Avatar src={`/${el.user.image}`} alt="" />
             <NameContainer>
               <Name>{el.user.name}</Name>
               <UserName>@{el.user.username}</UserName>
