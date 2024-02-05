@@ -6,7 +6,7 @@ import {
   Container,
   BackContainer,
 } from '../Style/RoadMapHeadStyles'
-import leftArrow from '../assets/shared/white-back-arr.svg'
+import leftArrow from '/assets/shared/white-back-arr.svg'
 import { useNavigate } from 'react-router-dom'
 export default function RoadMapHeader() {
   const navigate = useNavigate()

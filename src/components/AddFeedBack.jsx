@@ -25,11 +25,11 @@ import {
   CategoryList,
   ListItem,
 } from '../Style/AddFeedbackStyles'
-import leftArrow from '../assets/shared/icon-arrow-left.svg'
-import upArrow from '../assets/shared/icon-arrow-up.svg'
-import downArrow from '../assets/shared/icon-arrow-down.svg'
-import checkIcon from '../assets/shared/icon-check.svg'
-import plus from '../assets/shared/icon-plus.svg'
+import leftArrow from '/assets/shared/icon-arrow-left.svg'
+import upArrow from '/assets/shared/icon-arrow-up.svg'
+import downArrow from '/assets/shared/icon-arrow-down.svg'
+import checkIcon from '/assets/shared/icon-check.svg'
+import plus from '/assets/shared/icon-plus.svg'
 import { useNavigate } from 'react-router-dom'
 
 export default function AddFeedback() {

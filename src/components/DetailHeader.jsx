@@ -1,6 +1,6 @@
 import { HeaderContainer, Text, Arr, Btn } from '../Style/DetailHeaderStyles'
 import { useNavigate, useParams } from 'react-router-dom'
-import leftArr from '../assets/shared/icon-arrow-left.svg'
+import leftArr from '/assets/shared/icon-arrow-left.svg'
 
 export default function DetailHeader() {
   const navigate = useNavigate()

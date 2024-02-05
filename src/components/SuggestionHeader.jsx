@@ -1,6 +1,6 @@
-import checkIcon from '../assets/shared/icon-check.svg'
-import upIcon from '../assets/shared/icon-arrow-up.svg'
-import downIcon from '../assets/shared/icon-arrow-down.svg'
+import checkIcon from '/assets/shared/icon-check.svg'
+import upIcon from '/assets/shared/icon-arrow-up.svg'
+import downIcon from '/assets/shared/icon-arrow-down.svg'
 import { useState } from 'react'
 import { useDataContext } from '../context/DataContext'
 import {

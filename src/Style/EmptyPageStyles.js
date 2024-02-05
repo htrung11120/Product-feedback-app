@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import emptyIcon from '../assets/suggestions/illustration-empty.svg'
 
 export const Container = styled.div`
   width: 825px;

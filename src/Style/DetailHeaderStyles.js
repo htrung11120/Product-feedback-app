@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import leftArr from '../assets/shared/icon-arrow-left.svg'
 
 export const HeaderContainer = styled.div`
   display: flex;

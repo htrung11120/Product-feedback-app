@@ -14,7 +14,7 @@ import {
   CommentIcon,
   CommentNumber,
 } from '../Style/ProductRequestCardStyles'
-import commentIcon from '../assets/shared/icon-comments.svg'
+import commentIcon from '/assets/shared/icon-comments.svg'
 import UpIconArrow from './UpIconArrow'
 import { useNavigate, useParams } from 'react-router-dom'
 

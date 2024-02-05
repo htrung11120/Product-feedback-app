@@ -6,7 +6,7 @@ import {
   Text,
   FeedbackButton,
 } from '../Style/EmptyPageStyles'
-import emptyIcon from '../assets/suggestions/illustration-empty.svg'
+import emptyIcon from '/assets/suggestions/illustration-empty.svg'
 import { useNavigate } from 'react-router-dom'
 
 export default function EmptyPage() {
